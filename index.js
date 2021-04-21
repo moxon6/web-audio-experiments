@@ -1,14 +1,10 @@
  // @ts-check 
-
-function sine() {
-    const audioContext = new AudioContext();
-
-    const sine = audioContext.createOscillator();
-    
-    sine.start();
-    sine.connect(audioContext.destination);
-}
+ import { start as startSine, stop as stopSine} from './sine.js';
 
 document
-    .querySelector('#sine-wave')
-    .addEventListener('click', sine)
+    .querySelector('#sine-wave-start')
+    .addEventListener('click', startSine)
+
+document
+    .querySelector('#sine-wave-stop')
+    .addEventListener('click', stopSine)
