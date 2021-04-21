@@ -10,3 +10,11 @@ document
 document
     .querySelector('#sine-wave-stop')
     .addEventListener('click', stopSine)
+
+document
+    .querySelector('#audio-context-resume')
+    .addEventListener('click', () => audioContext.resume())
+
+document
+    .querySelector('#audio-context-suspend')
+    .addEventListener('click', () => audioContext.suspend())
