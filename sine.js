@@ -1,9 +1,7 @@
  // @ts-check 
 
-const audioContext = new AudioContext();
-
 let sine;
-export const start = () => {
+export const start = audioContext => () => {
     if (!sine) {
         sine = audioContext.createOscillator();    
         sine.connect(audioContext.destination);
@@ -17,4 +15,4 @@ export const stop = () => {
         sine = null
     }
 }
-
+   
