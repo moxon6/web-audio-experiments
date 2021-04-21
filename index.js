@@ -17,6 +17,7 @@ const gainValue = document
 
 document
     .querySelector('#sine-wave-gain-start')
+    // @ts-ignore
     .addEventListener('click', startSineGain(gainValue.value, audioContext))
 
 document
@@ -24,6 +25,7 @@ document
     .addEventListener('click', stopSineGain)
 
 gainValue
+    // @ts-ignore
     .addEventListener('change', () => setGain(gainValue.value, audioContext))
 
 document
